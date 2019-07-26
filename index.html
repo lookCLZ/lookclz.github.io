@@ -17,30 +17,53 @@
       width: 100%;
       height: 100%;
     }
-    body > div {
+    body > .top {
+      width: 100%;
+      height: 50vh;
+      background: #000;
+      position: absolute;
+      top: 0;
+      transition: all 1.5s;
+    }
+    body > .bottom {
+      width: 100%;
+      height: 50vh;
+      background: #000;
+      position: absolute;
+      bottom: 0;
+      transition: all 1.5s;
+    }
+    body > .container {
       width: 100%;
       height: 100%;
-      background: url(./bg.jpg);
+      background: url(./bgv2.jpg);
       background-repeat: no-repeat;
       background-position: 50%;
       background-size: cover;
     }
     ul {
-      padding-top: 128px !important;
+      width: 200px;
+      margin-left: 80px;
+      padding-top: 228px !important;
       display: flex;
+      flex-direction: column;
       justify-content: center;
     }
     li {
-      margin: 0 8px !important;
+      margin-left: 98px !important;
+    }
+    li:nth-child(1) {
+      margin-left: 38px !important;
     }
     ul,
     li {
       list-style: none;
       margin: 0;
+      text-shadow: 0px 0px 3px #000;
       padding: 0;
-      color: #fff;
+      color: #3e2a2a;
       font-size: 28px;
-      text-align: center;
+      text-align: left;
     }
     a {
       color: unset;
@@ -53,11 +76,19 @@
     }
   </style>
   <body>
-    <div>
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <div class="container">
       <ul>
-        <li><a href="/linux">linux</a></li>
-        <li><a href="/mysql">mysql</a></li>
+        <li><a href="/linux">Linux</a></li>
+        <li><a href="/mysql">MySQL</a></li>
       </ul>
     </div>
   </body>
+  <script>
+    window.onload = function() {
+      var top = (document.querySelector(".top").style.height = "0");
+      var bottom = (document.querySelector(".bottom").style.height = "0");
+    };
+  </script>
 </html>
