@@ -579,26 +579,34 @@ header, .context-menu, .megamenu-content, footer{
     body{
         padding:0;
         margin:0;
-        display:flex;
     }
     div.is-mac{
         width: calc(100% - 260px);
         padding: 20px;
         background:#eee;
-        transform:translateX(-75px);
+        z-index:2;
+        transform: translateX(-100px);
+    }
+    body>*{
+        width: calc(100% - 260px);
+        padding: 20px;
+        background:#eee;
         z-index:2;
     }
     img {
         cursor:pointer !important;
     }
     .title-container {
-        width: 280px;
-        top: 10px;
-        height: 100%;
-        overflow: auto;
-        position: fixed;
-        right: 10px;
-        padding-bottom: 80px;
+        padding: unset !important;
+        transform:unset !important;
+        width: 280px !important;
+        top: 10px !important;
+        height: 100% !important;
+        overflow: auto !important;
+        position: fixed !important;
+        right: 10px !important;
+        padding-bottom: 80px !important;
+        z-index:10;
     }
     .title-nav {
         color: #6f3535;
