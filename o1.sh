@@ -1,1 +1,1 @@
-git add -A&&git commit -m "commit"&&git push github master
+git push github master
